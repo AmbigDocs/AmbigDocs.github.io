@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>AmbigDocs</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="./css/style.css" rel="stylesheet">
+    <!-- Favicons -->
+  </head>
+  <body>
+    <nav id="navbar" class="shadow-sm navbar navbar-light bg-light">
+      <div id="navbar-content" class="container">
+        <a class="navbar-brand" href="#">AmbigDocs</a>
+        <ul class="nav nav-pills">
+          <li class="nav-item"><a href="#" class="nav-link active" aria-current="page">Home</a></li>
+          <li class="nav-item"><a href="./explorer.html" class="nav-link">Data Explorer</a></li>
+        </ul>
+      </div>
+    </nav>
+    <main id="main" class="container fs-5">
+      <div class="p-5">
+        <h1 class="text-center display-5 fw-normal">AmbigDocs: Reasoning across Documents on Different Entities under the Same Name</h1>
+        <h4 class="text-center display-10">Yoonsang Lee, Xi Ye, Eunsol Choi</h4>
+      </div>
+      <div class="pt-3">
+        <h2 class="display-6 fw-bold">About</h2>
+        <div class="row">
+          <div>
+            <p>Different entities with the same name can be difficult to distinguish. Handling confusing entity mentions is a crucial skill for language models (LMs). For example, given the question "Where was Michael Jordan educated?" and a set of documents discussing different people named Michael Jordan, can LMs distinguish entity mentions to generate a cohesive answer? To test this ability, we introduce a new benchmark, AmbigDocs. By leveraging Wikipedia's disambiguation pages, we identify a set of documents, belonging to different entities who share an ambiguous name. From these documents, we generate questions containing an ambiguous name and their corresponding sets of answers. Our analysis reveals that current state-of-the-art models often yield ambiguous answers or incorrectly merge information belonging to different entities. We establish an ontology categorizing four types of incomplete answers and automatic evaluation metrics to identify such categories. We lay the foundation for future work on reasoning across multiple documents with ambiguous entities.</p>
+          </div>
+        </div>
+        <div style="display:flex; justify-content: center;">
+          <img id="intro_fig" src="src/overview.png" alt="intro figure">
+        </div> <br>
+        <div style="display:flex; justify-content: center;">
+          <a class="btn btn-primary btn-lg" type="button" href="" target="_blank">Read the Paper</a> &nbsp;
+          <a class="btn btn-success btn-lg" type="button" href="https://github.com/lilys012/AmbigDocs" target="_blank">Download the Data & Code</a>
+        </div>
+      </div>
+      <div class="pt-5">
+        <h2 class="display-6 fw-bold">Citations</h2>
+        <p>If you find our work helpful, please cite us.</p>
+        <pre class="citations border bg-light p-2 fs-6">
+@article{ lee2024ambigdocs }</pre>
+
+      </div>
+      <div class="pt-4">
+        <h2 class="display-6 fw-bold">Contact</h2>
+        <p>
+        For any questions, please contact <a href="https://lilys012.github.io/">Yoonsang Lee</a> or open a <a href="https://github.com/lilys012/AmbigDocs">github issue</a>.
+        </p>
+      </div>
+      <hr>
+      <p style="font-size:12px">We thank <a href="https://situatedqa.github.io/">SituatedQA</a> authors for sharing templates for generating this webpage.</p>
+    </main>
+    <!-- Bootstrap Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  </body>
+</html>
