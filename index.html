@@ -33,11 +33,36 @@
           </div>
         </div>
         <div style="display:flex; justify-content: center;">
-          <img id="intro_fig" src="src/overview.png" alt="intro figure">
-        </div> <br>
-        <div style="display:flex; justify-content: center;">
           <a class="btn btn-primary btn-lg" type="button" href="" target="_blank">Read the Paper</a> &nbsp;
           <a class="btn btn-success btn-lg" type="button" href="https://github.com/lilys012/AmbigDocs" target="_blank">Download the Data & Code</a>
+        </div>
+      </div>
+      <div class="pt-3">
+        <h2 class="display-6 fw-bold">Ontology</h2>
+        <div class="row">
+          <p>We develop an ontology of five types of answers (complete answer, partial answer, ambiguous answer, merged answer, and no answer) that captures the unique challenge in AmbigDocs.</p>
+          <div style="display:flex; justify-content: center;">
+            <img id="intro_fig" src="src/overview.png" alt="intro figure">
+          </div> <br>
+          <ul style="padding-left:40px">
+            <li><b>Complete Answer</b>: LM correctly generates all valid answers in the provided document set. Each answer is paired with the disambiguated entity name.</li>
+            <li><b>Partial Answer</b>: LM generates one or more (but not all) of the valid answers in the provided document set. Each answer is paired with the disambiguated entity name.</li>
+            <li><b>No Answer</b>: LM abstains from providng any answer.</li>
+            <li><b>Ambiguous Answer</b>: LM generates one of the valid answers without providing the disambiguated entity name.</li>
+            <li><b>Merged Answer</b>: LM generates multiple answers without providing the disambiguated entity name (merging facts about multiple disambiguated entities).</li>
+          </ul>
+        </div>
+      </div>
+      <div class="pt-3">
+        <h2 class="display-6 fw-bold">FAQ</h2>
+        <div class="row">
+          <p><b>Q. How is AmbigDocs different from existing datasets like AmbigQA?</b><br>A. Despite rich study in ambiguous question answering (QA), few work studied how LMs reason when provided with a confusing document set. The major obstacle has been the lack of annotated documents containing gold disambiguated entity-answer pairs. To enable research in this area, we construct a synthetic dataset, whose single instance consists of a question asking about an ambiguous entity and a list of gold document-answer pairs for each disambiguated entity.</p>
+          <p><b>Q. How is the dataset generated?</b><br>A. We identify a surface name and a list of disambiguated entities from Wikipedia's disambiguation pages. We select two documents for generating a question and their corresponding answers. Subsequently, we gather additional answers from the remaining documents.
+            <div style="display:flex; justify-content: center;">
+              <img id="gen_fig" src="src/generation.png" alt="generation figure" style="width:70%">
+            </div> <br>
+          </p>
+          <p><b>Q. What is the statistics of AmbigDocs?</b><br>A. We collected a total of 36,098 examples, where they are randomly split into train/dev/test splits with ratios of 60%/10%/30%, respectively. On average, each question has 2.92 answers, covering a total of 102,624 distinct entities.</p>
         </div>
       </div>
       <div class="pt-5">

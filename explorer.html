@@ -30,7 +30,7 @@
             <div id="questions-list"></div>
           </div>
         </div>
-        <div id="question-display" class="col-7 py-4 d-none">
+        <div id="question-display" class="col-8 py-4 d-none">
           <div class="alert alert-warning">
             <p id="sn-info"></p>
             <hr>
@@ -39,6 +39,27 @@
           </div>
           <div class="row">
             <div id="document-labels"></div>
+          </div>
+          <div class="row">
+            <div class="alert">
+              <h4>Example Model Responses</h4>
+              <hr>
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col" style="width:17%;">Model</th>
+                    <th scope="col">Answer</th>
+                  </tr>
+                </thead>
+                <tbody id="temp-abs-labels">
+                  <tr><th scope="row" style="width:17%;">Llama2-7b</th><td id="llama7b"></td></tr>
+                  <tr><th scope="row" style="width:17%;">Mistral-7b</th><td id="mistral7b"></td></tr>
+                  <tr><th scope="row" style="width:17%;">Llama2-13b</th><td id="llama13b"></td></tr>
+                  <tr><th scope="row" style="width:17%;">GPT-3.5</th><td id="gpt3"></td></tr>
+                  <tr><th scope="row" style="width:17%;">GPT-4</th><td id="gpt4"></td></tr>
+                </tbody>
+              </table>
+            </div>
           </div>
         </div>
       </div>
