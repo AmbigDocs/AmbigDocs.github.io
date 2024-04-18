@@ -23,7 +23,10 @@
     <main id="main" class="container fs-5">
       <div class="p-5">
         <h1 class="text-center display-5 fw-normal">AmbigDocs: Reasoning across Documents on Different Entities under the Same Name</h1>
-        <h4 class="text-center display-10">Yoonsang Lee, Xi Ye, Eunsol Choi</h4>
+        <h4 class="text-center display-10">
+          <a href="https://lilys012.github.io" style="text-decoration: none;">Yoonsang Lee</a>, 
+          <a href="https://www.cs.utexas.edu/~xiye/" style="text-decoration: none;">Xi Ye</a>, 
+          <a href="https://eunsol.github.io" style="text-decoration: none;">Eunsol Choi</a>
       </div>
       <div class="pt-3">
         <h2 class="display-6 fw-bold">About</h2>
@@ -37,14 +40,11 @@
           <a class="btn btn-success btn-lg" type="button" href="https://github.com/lilys012/AmbigDocs" target="_blank">Download Code</a> &nbsp;
           <a class="btn btn-warning btn-lg" type="button" href="https://huggingface.co/datasets/yoonsanglee/AmbigDocs" target="_blank">Download Data</a>
         </div>
-      </div>
+      </div><br>
       <div class="pt-3">
-        <h2 class="display-6 fw-bold">Ontology</h2>
+        <h2 class="display-6 fw-bold">Types of Model Generated Answer</h2>
         <div class="row">
-          <p>We develop an ontology of five types of answers (complete answer, partial answer, ambiguous answer, merged answer, and no answer) that captures the unique challenge in AmbigDocs.</p>
-          <div style="display:flex; justify-content: center;">
-            <img id="intro_fig" src="src/overview.png" alt="intro figure">
-          </div> <br>
+          <p>We develop an ontology of five types of answers that captures the unique challenge in AmbigDocs.</p>
           <ul style="padding-left:40px">
             <li><b>Complete Answer</b>: LM correctly generates all valid answers in the provided document set. Each answer is paired with the disambiguated entity name.</li>
             <li><b>Partial Answer</b>: LM generates one or more (but not all) of the valid answers in the provided document set. Each answer is paired with the disambiguated entity name.</li>
@@ -52,6 +52,15 @@
             <li><b>Ambiguous Answer</b>: LM generates one of the valid answers without providing the disambiguated entity name.</li>
             <li><b>Merged Answer</b>: LM generates multiple answers without providing the disambiguated entity name (merging facts about multiple disambiguated entities).</li>
           </ul>
+          <div style="display:flex; justify-content: center; width: 100%">
+            <img id="intro_fig" src="src/overview.png" alt="intro figure" style="max-width:70%;">
+          </div> 
+        </div>
+      </div>
+      <div class="pt-3">
+        <h2 class="display-6 fw-bold">Performance of Current Models on AmbigDocs</h2>
+        <div class="row">
+          <p>Both open-source LLMs and GPT models suffer at identifying different entities, failing to generate complete answers. Mistral and GPT-4 exhibit the strongest performance, followed by Llama2-7b model, while larger models (Llama2-13b, GPT-3.5) significantly perform worse. Mistral generates more Partial answers but fewer Merged answers compared to GPT-4, leading to similar overall performance. Larger models such as Llama2-13b and GPT-3.5 tend to generate more Ambiguous and Merged answers rather than Complete answers, resulting in poor overall performance.</p>
         </div>
       </div>
       <div class="pt-3">
